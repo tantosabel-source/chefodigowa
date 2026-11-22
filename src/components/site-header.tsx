@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
 
-import { ArrowUpRight, Close, Menu } from "@/components/icons";
+import { ArrowUpRight, ChefHat, Close, Menu } from "@/components/icons";
 import { site } from "@/lib/site";
 
 export function SiteHeader() {
@@ -27,11 +27,9 @@ export function SiteHeader() {
     >
       <div className="site-shell flex h-[4.4rem] items-center justify-between gap-3 min-[860px]:grid min-[860px]:grid-cols-[1fr_auto_1fr]">
         <Link href="/" className="flex w-fit items-center gap-2.5" aria-label={`${site.chef} — Home`} onClick={closeMenu}>
-          <svg aria-hidden="true" viewBox="0 0 64 64" className="size-10 shrink-0 sm:size-[2.65rem]">
-            <rect width="64" height="64" rx="15" fill="var(--color-clay)" />
-            <rect x="17" y="13" width="28" height="38" rx="14" fill="none" stroke="var(--color-cream)" strokeWidth="5" />
-            <circle cx="48.5" cy="15.5" r="5" fill="var(--color-gold)" stroke="var(--color-clay)" strokeWidth="2" />
-          </svg>
+          <span aria-hidden="true" className="grid size-10 shrink-0 place-items-center rounded-[15px] bg-clay text-cream sm:size-[2.65rem]">
+            <ChefHat className="size-6 sm:size-7" />
+          </span>
           <span className="leading-none">
             <span className="block font-display text-[1.6rem] font-extrabold uppercase leading-[0.9] tracking-[0.005em] text-forest sm:text-[1.85rem]">{site.chef}</span>
             <span className="mt-1.5 block text-[0.56rem] font-bold uppercase tracking-[0.18em] text-ink/66">Culinary portfolio</span>
